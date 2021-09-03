@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Covid Stats 2021</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../styles/region.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>COVID 19 STATS IN THAILAND</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home">หน้าหลัก</a>
+        <div class="dropbtn">
+            <div class="dropdown">
+                <a class="dropbtn">ภูมิภาค</a>
+                <div class="dropdown-content">
+                    <a href="#north">ภาคเหนือ</a>
+                    <a href="#east">ภาคตะวันออก</a>
+                    <a href="#northEast">ภาคตะวันออกเฉียงเหนือ</a>
+                    <a href="#central">ภาคกลาง</a>
+                    <a href="#west">ภาคตะวันตก</a>
+                    <a href="#south">ภาคใต้</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="left: 15%; position: relative">
+        <h2 style="text-align: left">สถานการณ์ในภาคกลาง</h2>
+    </div>
+    <div class="rectangle">
+        <div class="vl" style="left: 38%"></div>
+        <div class="vl" style="left: 62%"></div>
+        <table>
+            <tr style="text-align: left">
+                <td>ผู้ติดเชื้อเพิ่มวันนี้</td>
+                <td>หายป่วยกลับบ้าน</td>
+                <td>กำลังรักษา</td>
+            </tr>
+            <tr style="text-align: right; font-size: 55px">
+                <th style="color: #ff2928">+7,999</th>
+                <th style="color: #005838">+3,000</th>
+                <th style="color: #ffd300">4,567</th>
+            </tr>
+            <tr style="text-align: left; padding-top: 50px">
+                <td>เสียชีวิตเพิ่มวันนี้</td>
+                <td>หายป่วยสะสม</td>
+                <td>ผู้ป่วยสะสม</td>
+            </tr>
+            <tr style="text-align: right; font-size: 55px; color: #000000">
+                <th>200</th>
+                <th>40,000</th>
+                <th>212,224</th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="ค้นหาจังหวัด.." title="search" style="border-radius: 10px" />
+        <i class="fa fa-search fa-lg"></i>
+    </div>
+
+    <div class="rectangle" style="text-align: left; padding: 20px; border-color: #007662">
+        <ul id="myUL">
+            <li><a href="#">กรุงเทพมหานคร</a></li>
+            <li><a href="#">กำแพงเพชร</a></li>
+            <li><a href="#">ชัยนาท</a></li>
+            <li><a href="#">นครนายก</a></li>
+            <li><a href="#">นครปฐม</a></li>
+            <li><a href="#">นครสวรรค์</a></li>
+            <li><a href="#">นนทบุรี</a></li>
+            <li><a href="#">ปทุมธานี</a></li>
+            <li><a href="#">พระนครศรีอยุธยา</a></li>
+            <li><a href="#">พิจิตร</a></li>
+            <li><a href="#">พิษณุโลก</a></li>
+            <li><a href="#">เพชรบูรณ์</a></li>
+            <li><a href="#">ลพบุรี</a></li>
+            <li><a href="#">สมุทรปราการ</a></li>
+            <li><a href="#">สมุทรสงคราม</a></li>
+            <li><a href="#">สมุทรสาคร</a></li>
+            <li><a href="#">สิงห์บุรี</a></li>
+            <li><a href="#">สุโขทัย</a></li>
+            <li><a href="#">สุพรรณบุรี</a></li>
+            <li><a href="#">สระบุรี</a></li>
+            <li><a href="#">อ่างทอง</a></li>
+            <li><a href="#">อุทัยธานี</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

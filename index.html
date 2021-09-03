@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Covid Stats 2021</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/index_style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>COVID 19 STATS IN THAILAND</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home">หน้าหลัก</a>
+        <div class="dropbtn">
+            <div class="dropdown">
+                <a class="dropbtn">ภูมิภาค</a>
+                <div class="dropdown-content">
+                    <a href="#north">ภาคเหนือ</a>
+                    <a href="#east">ภาคตะวันออก</a>
+                    <a href="#northEast">ภาคตะวันออกเฉียงเหนือ</a>
+                    <a href="#central">ภาคกลาง</a>
+                    <a href="#west">ภาคตะวันตก</a>
+                    <a href="#south">ภาคใต้</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- The flexible grid (content) -->
+    <div class="main" id="home">
+        <div>
+            <p style="font-size: 200%;">สถานการณ์ในประเทศไทย</p>
+            <div class="part">
+                <div class="box">
+                    <p style="color: #ff2928 ;font-size: 300%;">20,123</p>
+                    <p style="text-align: center;font-size: 23px;">รายใหม่</p>
+                </div>
+                <div class="box">
+                    <p style="color: #005838 ;font-size: 300%;">21,224</p>
+                    <p style="text-align: center;font-size: 23px;">หายป่วย</p>
+                </div>
+                <div class="box">
+                    <p style="color: #ff2928 ;font-size: 300%;">112</p>
+                    <p style="text-align: center;font-size: 23px;">เสียชีวิต</p>
+                </div>
+                <div class="box">
+                    <p style="color: black ;font-size: 300%;">900,919</p>
+                    <p style="text-align: center;font-size: 23px;">ผู้ป่วยสะสม</p>
+                </div>
+                <div class="box">
+                    <p style="color: #005838 ;font-size: 300%;">414,428</p>
+                    <p style="text-align: center;font-size: 23px;">หายป่วยสะสม</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="chart">
+        <div class="part">
+            <div class="box">
+                <p id="topChart" style="font-size: 200%;">อัตราผู้ติดเชื่อที่เพิ่มขึ้น (รายวัน)</p>
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+            <div class="box">
+                <p id="topChart" style="font-size: 200%;">อัตราผู้ติดเชื่อที่เพิ่มขึ้น (สัปดาห์)</p>
+                <canvas id="myChart2" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./scripts/chart_homepage.js"></script>
+
+</html>
