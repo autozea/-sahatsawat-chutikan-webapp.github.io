@@ -17,6 +17,16 @@ body {
     font-family: kanit;
 }
 
+div h2 {
+    width: auto;
+    text-align: left;
+    margin-left: 15%;
+}
+
+div h2 span {
+    font-size: 150%;
+}
+
 
 /* Style the top navigation bar */
 
@@ -114,7 +124,7 @@ body {
     border: 6px #707070 solid;
     border-radius: 50px;
     margin: 30px auto;
-    padding: 20px 0 0 0;
+    padding: 5px 0 5px 0;
 }
 
 table {
@@ -131,14 +141,36 @@ td {
     font-size: 22px;
 }
 
+#covid-status {
+    float: left;
+    width: 100%;
+}
+
+#covid-status-main {
+    display: flex;
+    padding: 0;
+}
+
+.covid-status-title {
+    font-size: 150%;
+    text-align: left;
+    padding: 0 0 0 10%;
+    margin: 2px;
+}
+
+.covid-status-stats {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 10% 0 0;
+    margin: 0;
+}
+
 
 /* vertical line */
 
 .vl {
-    border-left: 1px solid #707070;
-    height: 23%;
-    position: absolute;
-    margin-top: 1% 5%;
+    border-left: 1px solid rgb(207, 203, 203);
 }
 
 
@@ -184,14 +216,11 @@ td {
 #myUL {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 10px;
 }
 
 #myUL li a {
-    /* border: 1px solid #e0e0e0; */
     margin-top: -1px;
-    /* Prevent double borders */
-    /* background-color: #f6f6f6; */
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
@@ -235,93 +264,259 @@ td {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 
-@media (orientation: portrait) and (max-width: 320px) {
-    .main {
-        margin: 0;
-        text-align: center;
-        font-size: 80%;
-    }
-    table {
-        padding: 5px 12px;
-        width: 100%;
-        text-align: left;
-        height: auto;
-    }
-    tr {
-        padding: 10px;
-    }
-    td {
-        font-size: 12px;
-        padding-left: 5px;
-    }
-    th {
-        text-align: left;
-        font-size: 18px;
-    }
-    .rectangle {
-        text-align: center;
-        height: 25%;
-        width: 85%;
-        background-color: white;
-        border: 3px #707070 solid;
-        border-radius: 50px;
-        margin: 30px auto;
-        padding: 20px 0 0 0;
-    }
-    .vl {
-        border-left: 1px solid #707070;
-        height: 20%;
-        position: relative;
-        margin-top: 1% 5%;
-    }
-    #myUL li a {
-        margin-top: -1px;
-        padding: 6px;
-        text-decoration: none;
-        font-size: 14px;
-        color: black;
-        display: block
-    }
-}
-
-@media (orientation: landscape) and (max-width:568px) {
+@media screen and (max-width:1600px) {
     .main {
         margin: 0;
         text-align: center;
         flex-flow: initial;
+        font-size: 100%;
     }
-    table {
-        padding: 5px 12px;
-        width: 100%;
+}
+
+@media screen and (max-width:1366px) {
+    div h2 {
+        width: auto;
         text-align: left;
-        height: auto;
+        margin-left: 15%;
     }
-    tr {
-        padding: 10px;
-    }
-    td {
-        font-size: 14px;
-        padding-left: 5px;
-    }
-    th {
-        text-align: left;
-        font-size: 22px;
+    div h2 span {
+        font-size: 150%;
     }
     .rectangle {
         text-align: center;
         height: 25%;
-        width: 90%;
+        width: 70%;
+        background-color: white;
+        border: 4px #707070 solid;
+        border-radius: 40px;
+        margin: 30px auto;
+        padding: 5px 0 5px 0;
+    }
+    #myUL li a {
+        margin-top: -1px;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+    #covid-status {
+        float: left;
+        width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 130%;
+        text-align: left;
+        padding: 0 0 0 10%;
+        margin: 2px;
+    }
+    .covid-status-stats {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 8% 0 0;
+        margin: 0;
+    }
+    /* vertical line */
+    .vl {
+        border-left: 1px solid rgb(207, 203, 203);
+    }
+}
+
+@media screen and (max-width:1280px) {
+    div h2 {
+        width: auto;
+        text-align: left;
+        margin-left: 15%;
+    }
+    div h2 span {
+        font-size: 150%;
+    }
+    .rectangle {
+        text-align: center;
+        height: 25%;
+        width: 70%;
+        background-color: white;
+        border: 4px #707070 solid;
+        border-radius: 40px;
+        margin: 30px auto;
+        padding: 5px 0 5px 0;
+    }
+    #myUL li a {
+        margin-top: -1px;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+    #covid-status {
+        float: left;
+        width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 130%;
+        text-align: left;
+        padding: 0 0 0 10%;
+        margin: 2px;
+    }
+    .covid-status-stats {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 8% 0 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    div h2 {
+        width: auto;
+        text-align: left;
+        margin-left: 15%;
+    }
+    div h2 span {
+        font-size: 150%;
+    }
+    .rectangle {
+        text-align: center;
+        height: 25%;
+        width: 70%;
+        background-color: white;
+        border: 4px #707070 solid;
+        border-radius: 40px;
+        margin: 30px auto;
+        padding: 5px 0 5px 0;
+    }
+    #myUL li a {
+        margin-top: -1px;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+    #covid-status {
+        float: left;
+        width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 120%;
+        text-align: left;
+        padding: 0 0 0 10%;
+        margin: 2px;
+    }
+    .covid-status-stats {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 8% 0 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    div h2 {
+        width: auto;
+        text-align: left;
+        margin-left: 10%;
+    }
+    div h2 span {
+        font-size: 130%;
+    }
+    .rectangle {
+        text-align: center;
+        height: 25%;
+        width: 80%;
         background-color: white;
         border: 3px #707070 solid;
-        border-radius: 50px;
-        margin: 30px auto;
-        padding: 20px 0 0 0;
+        border-radius: 40px;
+        margin: 20px auto;
+        padding: 5px 0 5px 0;
     }
-    .vl {
-        border-left: 1px solid #707070;
-        height: 30%;
-        position: absolute;
-        margin-top: 1% 5%;
+    .search-container {
+        padding-left: 10%;
+        display: flex;
+        width: 80%;
+        align-items: baseline;
+    }
+    #myUL li a {
+        margin-top: -1px;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: black;
+        display: block
+    }
+    #covid-status {
+        float: left;
+        width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 100%;
+        text-align: left;
+        padding: 0 0 0 10%;
+        margin: 2px;
+    }
+    .covid-status-stats {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 8% 0 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:736px) {
+    div h2 {
+        width: auto;
+        text-align: left;
+        margin-left: 10%;
+    }
+    div h2 span {
+        font-size: 130%;
+    }
+    .rectangle {
+        text-align: center;
+        height: 25%;
+        width: 80%;
+        background-color: white;
+        border: 3px #707070 solid;
+        border-radius: 40px;
+        margin: 15px auto;
+        padding: 5px 0 5px 0;
+    }
+    .search-container {
+        padding-left: 10%;
+        display: flex;
+        width: 80%;
+        align-items: baseline;
+    }
+    #myInput {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 60%;
+        font-size: 16px;
+        padding: 6px 20px 6px 20px;
+        margin: 0;
+        border: 1px solid #ddd;
+        font-family: kanit;
     }
     #myUL li a {
         margin-top: -1px;
@@ -331,101 +526,225 @@ td {
         color: black;
         display: block
     }
-}
-
-@media (orientation: portrait) and (min-width:768px) {
-    .main {
-        margin: 0;
-        text-align: center;
-        flex-flow: initial;
-    }
-    table {
-        padding: 5px 12px;
+    #covid-status {
+        float: left;
         width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 100%;
         text-align: left;
-        height: auto;
+        padding: 0 0 0 10%;
+        margin: 2px;
     }
-    tr {
-        padding: 10px;
-    }
-    td {
-        font-size: 18px;
-        padding-left: 5px;
-    }
-    th {
-        text-align: left;
-        font-size: 30px;
-    }
-    .rectangle {
-        text-align: center;
-        height: 30%;
-        width: 90%;
-        background-color: white;
-        border: 3px #707070 solid;
-        border-radius: 50px;
-        margin: 30px auto;
-        padding: 20px 0 0 0;
-    }
-    .vl {
-        border-left: 1px solid #707070;
-        height: 10%;
-        position: relative;
-        margin-top: 1% 5%;
-    }
-    #myUL li a {
-        margin-top: -1px;
-        padding: 8px;
-        text-decoration: none;
-        font-size: 20px;
-        color: black;
-        display: block
+    .covid-status-stats {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 8% 0 0;
+        margin: 0;
     }
 }
 
-@media (orientation: landscape) and (width:1024px) {
-    .main {
-        margin: 0;
-        text-align: center;
-        flex-flow: initial;
-    }
-    table {
-        padding: 5px 12px;
-        width: 100%;
+@media screen and (max-width:540px) {
+    div h2 {
+        width: auto;
         text-align: left;
-        height: auto;
+        margin: 0 0 0 8%;
     }
-    tr {
-        padding: 10px;
-    }
-    td {
-        font-size: 20px;
-        padding-left: 5px;
-    }
-    th {
-        text-align: left;
-        font-size: 35px;
+    div h2 span {
+        font-size: 130%;
     }
     .rectangle {
         text-align: center;
         height: 25%;
-        width: 90%;
+        width: 85%;
         background-color: white;
         border: 3px #707070 solid;
-        border-radius: 50px;
-        margin: 30px auto;
-        padding: 20px 0 0 0;
+        border-radius: 30px;
+        margin: 12px auto;
+        padding: 5px 0 5px 0;
     }
-    .vl {
-        border-left: 1px solid #707070;
-        height: 20%;
-        position: relative;
+    .search-container {
+        padding-left: 8%;
+        display: flex;
+        width: 80%;
+        align-items: baseline;
+    }
+    #myInput {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 80%;
+        font-size: 14px;
+        padding: 6px 20px 6px 20px;
+        margin: 0;
+        border: 1px solid #ddd;
+        font-family: kanit;
     }
     #myUL li a {
         margin-top: -1px;
         padding: 8px;
         text-decoration: none;
-        font-size: 22px;
+        font-size: 14px;
         color: black;
         display: block
+    }
+    #covid-status {
+        float: left;
+        width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 100%;
+        text-align: left;
+        padding: 3% 0 0 5%;
+        margin: 2px;
+    }
+    .covid-status-stats {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 5% 3% 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    div h2 {
+        width: auto;
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 0;
+        padding-top: 5px;
+    }
+    div h2 span {
+        font-size: 130%;
+    }
+    .rectangle {
+        text-align: center;
+        height: 25%;
+        width: 95%;
+        background-color: white;
+        border: 3px #707070 solid;
+        border-radius: 20px;
+        margin: 12px auto;
+        padding: 5px 0 5px 0;
+    }
+    .search-container {
+        padding-left: 3%;
+        display: flex;
+        width: 90%;
+        align-items: baseline;
+    }
+    #myInput {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 80%;
+        font-size: 14px;
+        padding: 6px 20px 6px 20px;
+        margin: 0;
+        border: 1px solid #ddd;
+        font-family: kanit;
+    }
+    #myUL li a {
+        margin-top: -1px;
+        padding: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        color: black;
+        display: block
+    }
+    #covid-status {
+        float: left;
+        width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 90%;
+        text-align: left;
+        padding: 3% 0 0 5%;
+        margin: 2px;
+    }
+    .covid-status-stats {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 5% 3% 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:320px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    div h2 {
+        width: auto;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+        padding-top: 5px;
+    }
+    div h2 span {
+        font-size: 130%;
+    }
+    .rectangle {
+        width: 95%;
+        border: 2px #707070 solid;
+        border-radius: 10px;
+        margin: 12px auto;
+        padding: 5px 0 5px 0;
+    }
+    .search-container {
+        padding-left: 3%;
+        width: 90%;
+    }
+    #myInput {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 80%;
+        font-size: 14px;
+        padding: 6px 20px 6px 20px;
+        margin: 0;
+        border: 1px solid #ddd;
+        font-family: kanit;
+    }
+    #myUL li a {
+        padding: 3px;
+        text-decoration: none;
+        font-size: 14px;
+        color: black;
+        display: block
+    }
+    #covid-status {
+        float: left;
+        width: 100%;
+    }
+    #covid-status-main {
+        display: flex;
+        padding: 0;
+    }
+    .covid-status-title {
+        font-size: 80%;
+        text-align: left;
+        padding: 3% 0 0 5%;
+        margin: 2px;
+    }
+    .covid-status-stats {
+        font-size: 1.3rem;
+        padding: 0 5% 3% 0;
+        margin: 0;
     }
 }

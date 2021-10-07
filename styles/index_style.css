@@ -1,11 +1,17 @@
-
 /* Style the body */
+
 body {
     font-family: kanit;
     margin: 0;
 }
 
+#head {
+    margin: 1%;
+}
+
+
 /* Header/logo Title */
+
 .header {
     padding: 10px;
     text-align: left;
@@ -15,14 +21,17 @@ body {
     font-family: kanit;
 }
 
+
 /* Style the top navigation bar */
+
 .navbar {
     display: flex;
     background-color: #84CEBE;
-    
 }
 
+
 /* Style the navigation bar links */
+
 .navbar a {
     color: black;
     padding: 14px 20px;
@@ -34,7 +43,9 @@ body {
     border-width: medium;
 }
 
+
 /* Change color on hover */
+
 .navbar a:hover {
     background-color: #007662;
     color: white;
@@ -83,109 +94,243 @@ body {
     color: white;
 }
 
+
 /* Main column */
+
 .main {
     text-align: left;
     background-color: #efefef;
     margin: 1% 15%;
     padding: 0.25% 1%;
 }
+
 .part {
     display: flex;
     padding: 5px 5px;
     justify-content: space-around;
-    
 }
-.chart{
+
+.chart {
     text-align: left;
     margin: 1% 15%;
     padding: 0.25% 1%;
 }
-.box p{
-    margin:0
+
+.box p {
+    margin: 0
 }
+
+
 /* Footer */
+
 .footer {
     padding: 20px;
     text-align: center;
     background: #ddd;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media (orientation: portrait) and (max-width: 320px) {
-    .main{
-        margin: 0;
-        text-align: center;
-    }
-    .part{
-        font-size: 100%;
-        text-align: center;
-        flex-direction: column;
-    }
-    .main{
-        font-size: 80%;
-        
-    }
-    .chart{
-        text-align: center;
-    }
 
-}
-@media (orientation: landscape) and (max-width:568px){
-    .main{
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width:1600px) {
+    .main {
         margin: 0;
         text-align: center;
-        flex-flow:initial;
+        flex-flow: initial;
     }
-    .part{
+    .part {
+        font-size: 100%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1366px) {
+    .main {
+        margin: 0;
+        text-align: center;
+    }
+    .part {
+        font-size: 100%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .main {
+        margin: 0;
+        text-align: center;
+    }
+    .part {
         font-size: 70%;
         text-align: center;
-        
     }
-    .main{
-        font-size: 80%;
-        
+    .main {
+        font-size: 100%;
     }
-    .chart{
-        text-align: center;
-    }
-    
-}
-@media (orientation: portrait) and (min-width:768px){
-    .main{
+    .chart {
         margin: 0;
         text-align: center;
     }
-    .part{
+}
+
+@media screen and (max-width:1024px) {
+    .main {
+        margin: 0;
+        text-align: center;
+        flex-flow: initial;
+    }
+    .part {
+        font-size: 100%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media (orientation: portrait) and (max-width:1024px) {
+    .main {
+        margin: 0;
+        text-align: center;
+        flex-flow: initial;
+    }
+    .part {
         font-size: 100%;
         text-align: center;
         flex-direction: column;
     }
-    .main{
+    .main {
         font-size: 100%;
-        
     }
-    .chart{
-        text-align: center;
-    }
-    
-}
-@media (orientation: landscape) and (width:1024px){
-    .main{
+    .chart {
         margin: 0;
         text-align: center;
-        flex-flow:initial;
     }
-    .part{
+}
+
+@media screen and (max-width:768px) {
+    .main {
+        margin: 0;
+        text-align: center;
+    }
+    .part {
         font-size: 70%;
         text-align: center;
-        
+        flex-direction: column;
     }
-    .main{
+    .main {
         font-size: 100%;
-        
     }
-    .chart{
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .main {
+        margin: 0;
+        text-align: center;
+    }
+    .part {
+        font-size: 70%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .main {
+        margin: 0;
+        text-align: center;
+    }
+    .part {
+        font-size: 70%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .main {
+        margin: 0;
+        text-align: center;
+    }
+    .part {
+        font-size: 70%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .main {
+        margin: 0;
+        text-align: center;
+    }
+    .part {
+        font-size: 70%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:280px) {
+    .main {
+        margin: 0;
+        text-align: center;
+        flex-flow: initial;
+    }
+    .part {
+        font-size: 70%;
+        text-align: center;
+    }
+    .main {
+        font-size: 100%;
+    }
+    .chart {
         margin: 0;
         text-align: center;
     }
