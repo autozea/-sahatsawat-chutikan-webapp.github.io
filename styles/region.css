@@ -233,6 +233,19 @@ td {
 }
 
 
+/* province details */
+
+#province-detail {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 30px 0 10px 10px;
+    color: white;
+    height: 200px;
+    width: 400px;
+}
+
+
 /* Create two unequal columns that sits next to each other */
 
 
