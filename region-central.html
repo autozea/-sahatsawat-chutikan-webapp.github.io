@@ -1,106 +1,172 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Covid Stats 2021</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles/region.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <div class="header">
-        <h1>COVID 19 STATS IN THAILAND</h1>
+      <h1>COVID 19 STATS IN THAILAND</h1>
     </div>
 
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="index.html">หน้าหลัก</a>
-        <div class="dropbtn">
-            <div class="dropdown">
-                <a class="dropbtn">ภูมิภาค</a>
-                <div class="dropdown-content">
-                    <a href="./region-north.html">ภาคเหนือ</a>
-                    <a href="./region-easten.html">ภาคตะวันออก</a>
-                    <a href="./region-northeast.html">ตะวันออกเฉียงเหนือ</a>
-                    <a href="./region-central.html">ภาคกลาง</a>
-                    <a href="./region-westen.html">ภาคตะวันตก</a>
-                    <a href="./region-south.html">ภาคใต้</a>
-                </div>
-            </div>
+      <a href="index.html">หน้าหลัก</a>
+      <div class="dropbtn">
+        <div class="dropdown">
+          <a class="dropbtn">ภูมิภาค</a>
+          <div class="dropdown-content">
+            <a href="./region-north.html">ภาคเหนือ</a>
+            <a href="./region-easten.html">ภาคตะวันออก</a>
+            <a href="./region-northeast.html">ตะวันออกเฉียงเหนือ</a>
+            <a href="./region-central.html">ภาคกลาง</a>
+            <a href="./region-westen.html">ภาคตะวันตก</a>
+            <a href="./region-south.html">ภาคใต้</a>
+          </div>
         </div>
+      </div>
     </div>
     <div>
-        <h2>สถานการณ์ในภาค<span> กลาง</span></h2>
+      <h2>สถานการณ์ในภาค<span> กลาง</span></h2>
     </div>
     <div class="rectangle" id="covid-status-main">
-        <div id="covid-status">
-            <div>
-                <p class="covid-status-title">ติดเชื้อเพิ่มวันนี้</p>
-                <p class="covid-status-stats" style="color: #ff2928">+714</p>
-            </div>
-            <div>
-                <p class="covid-status-title">เสียชีวิตเพิ่มวันนี้</p>
-                <p class="covid-status-stats">200</p>
-            </div>
+      <div id="covid-status">
+        <div>
+          <p class="covid-status-title">ติดเชื้อเพิ่มวันนี้</p>
+          <p class="covid-status-stats" style="color: #ff2928">
+            +<span id="sum_today">0</span>
+          </p>
         </div>
-        <div class="vl" id="covid-status">
-            <div>
-                <p class="covid-status-title">หายป่วยกลับบ้าน</p>
-                <p class="covid-status-stats" style="color: #005838">+3,000</p>
-            </div>
-            <div>
-                <p class="covid-status-title">หายป่วยสะสม</p>
-                <p class="covid-status-stats">40,000</p>
-            </div>
+        <div>
+          <p class="covid-status-title">เสียชีวิตเพิ่มวันนี้</p>
+          <p class="covid-status-stats"><span id="sum_total_death"></span>0</p>
+          <p id="dead"></p>
         </div>
-        <div class="vl" id="covid-status">
-            <div>
-                <p class="covid-status-title">กำลังรักษา</p>
-                <p class="covid-status-stats" style="color: #ffd300">4,567</p>
-            </div>
-            <div>
-                <p class="covid-status-title">ผู้ป่วยสะสม</p>
-                <p class="covid-status-stats">212,224</p>
-            </div>
+      </div>
+      <div class="vl" id="covid-status">
+        <div>
+          <p class="covid-status-title">หายป่วยกลับบ้าน</p>
+          <p class="covid-status-stats" style="color: #005838">
+            +<span id="sum_total_death"></span>0
+          </p>
         </div>
+        <div>
+          <p class="covid-status-title">หายป่วยสะสม</p>
+          <p class="covid-status-stats"><span id="total_case"></span>0</p>
+        </div>
+      </div>
+      <div class="vl" id="covid-status">
+        <div>
+          <p class="covid-status-title">กำลังรักษา</p>
+          <p class="covid-status-stats" style="color: #ffd300">
+            <span id="healing_case"></span>0
+          </p>
+        </div>
+        <div>
+          <p class="covid-status-title">ผู้ป่วยสะสม</p>
+          <p class="covid-status-stats"><span id="total_case"></span>0</p>
+        </div>
+      </div>
     </div>
 
     <div class="search-container">
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="ค้นหาจังหวัด.." title="search" style="border-radius: 10px" />
-        <i class="fa fa-search fa-lg"></i>
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction('central')"
+        placeholder="ค้นหาจังหวัด.."
+        title="search"
+        style="border-radius: 10px"
+      />
+      <i class="fa fa-search fa-lg"></i>
     </div>
 
-    <div class="rectangle" style="text-align: left;  border-color: #007662">
-        <ul id="myUL">
-            <li><a href="./region-central-province.html">กรุงเทพมหานคร</a></li>
-            <li><a href="#">กำแพงเพชร</a></li>
-            <li><a href="#">ชัยนาท</a></li>
-            <li><a href="#">นครนายก</a></li>
-            <li><a href="#">นครปฐม</a></li>
-            <li><a href="#">นครสวรรค์</a></li>
-            <li><a href="#">นนทบุรี</a></li>
-            <li><a href="#">ปทุมธานี</a></li>
-            <li><a href="#">พระนครศรีอยุธยา</a></li>
-            <li><a href="#">พิจิตร</a></li>
-            <li><a href="#">พิษณุโลก</a></li>
-            <li><a href="#">เพชรบูรณ์</a></li>
-            <li><a href="#">ลพบุรี</a></li>
-            <li><a href="#">สมุทรปราการ</a></li>
-            <li><a href="#">สมุทรสงคราม</a></li>
-            <li><a href="#">สมุทรสาคร</a></li>
-            <li><a href="#">สิงห์บุรี</a></li>
-            <li><a href="#">สุโขทัย</a></li>
-            <li><a href="#">สุพรรณบุรี</a></li>
-            <li><a href="#">สระบุรี</a></li>
-            <li><a href="#">อ่างทอง</a></li>
-            <li><a href="#">อุทัยธานี</a></li>
-        </ul>
+    <div class="rectangle" style="text-align: left; border-color: #007662">
+      <ul id="myUL"></ul>
     </div>
 
     <script src="./scripts/search-cont.js"></script>
-</body>
-
+    <script>
+      fetch(
+        "https://api-lab-covid.mindbase.co.th/v2/stats/provinces/daily?key=2f082573-f921-4441-9838-202108a3f4b5116e9c"
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          var ul = document.getElementById("myUL");
+          ul.style.listStyleType = "none";
+          list_central_no = [
+            "69",
+            "22",
+            "65",
+            "67",
+            "66",
+            "20",
+            "75",
+            "70",
+            "63",
+            "46",
+            "16",
+            "9",
+            "36",
+            "71",
+            "77",
+            "73",
+            "74",
+            "30",
+            "39",
+            "56",
+            "72",
+            "29",
+          ];
+          let sum_today = 0;
+          data.data.provinces.forEach((province) => {
+            if (list_central_no.includes(province.no)) {
+              var li = document.createElement("li");
+              var today_sum = document.getElementById("sum_today");
+              today_sum.innerHTML = sum_today;
+              li.innerHTML = `<a href="#">${province.name_th}</a>`;
+              ul.appendChild(li);
+              sum_today += province.count;
+            }
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+    <!-- list_central_name = [
+   "กรุงเทพมหานคร",
+   "กำแพงเพชร",
+   "ชัยนาท",
+   "นครนายก",
+   "นครปฐม",
+   "นครสวรรค์",
+   "นนทบุรี",
+   "ปทุมธานี",
+   "พระนครศรีอยุธยา",
+   "พิจิตร",
+   "พิษณุโลก",
+   "เพชรบูรณ์",
+   "ลพบุรี",
+   "สมุทรปราการ",
+   "สมุทรสงคราม",
+   "สมุทรสาคร",
+   "สิงห์บุรี",
+   "สุโขทัย",
+   "สุพรรณบุรี",
+   "สระบุรี",
+   "อ่างทอง",
+   "อุทัยธานี",
+ ]; -->
+  </body>
 </html>

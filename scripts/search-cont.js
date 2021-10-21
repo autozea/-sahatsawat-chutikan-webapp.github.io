@@ -1,4 +1,4 @@
-function myFunction() {
+function myFunction(region) {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
@@ -12,5 +12,7 @@ function myFunction() {
         } else {
             li[i].style.display = "none";
         }
+
     }
 }
+
