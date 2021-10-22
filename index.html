@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
 
-
 </head>
 
 <body>
@@ -43,23 +42,23 @@
             <p id="head" style="font-size: 200%;">สถานการณ์ในประเทศไทย</p>
             <div class="part">
                 <div class="box">
-                    <p style="color: #ff2928 ;font-size: 300%;">20,123</p>
+                    <p id="dailyCovid" style="color: #ff2928 ;font-size: 300%;"></p>
                     <p style="text-align: center;font-size: 23px;">รายใหม่</p>
                 </div>
                 <div class="box">
-                    <p style="color: #005838 ;font-size: 300%;">21,224</p>
+                    <p id="dailyRecovered" style="color: #005838 ;font-size: 300%;"></p>
                     <p style="text-align: center;font-size: 23px;">หายป่วย</p>
                 </div>
                 <div class="box">
-                    <p style="color: #ff2928 ;font-size: 300%;">112</p>
+                    <p id="dailyDead" style="color: #ff2928 ;font-size: 300%;"></p>
                     <p style="text-align: center;font-size: 23px;">เสียชีวิต</p>
                 </div>
                 <div class="box">
-                    <p style="color: black ;font-size: 300%;">900,919</p>
+                    <p id="cumulativeCovid" style="color: black ;font-size: 300%;"></p>
                     <p style="text-align: center;font-size: 23px;">ผู้ป่วยสะสม</p>
                 </div>
                 <div class="box">
-                    <p style="color: #005838 ;font-size: 300%;">414,428</p>
+                    <p id="cumulativeRecovered" style="color: #005838 ;font-size: 300%;"></p>
                     <p style="text-align: center;font-size: 23px;">หายป่วยสะสม</p>
                 </div>
             </div>
@@ -78,6 +77,7 @@
             </div>
         </div>
     </div>
+    <script src="./scripts/api_daily.js"></script>
     <script src="./scripts/chart_homepage.js"></script>
 </body>
 
