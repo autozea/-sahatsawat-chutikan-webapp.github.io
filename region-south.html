@@ -47,32 +47,33 @@
         </div>
         <div>
           <p class="covid-status-title">เสียชีวิตเพิ่มวันนี้</p>
-          <p class="covid-status-stats"><span id="sum_total_death"></span>0</p>
-          <p id="dead"></p>
+          <p class="covid-status-stats"><span id="sum_today_death">0</span></p>
         </div>
       </div>
       <div class="vl" id="covid-status">
         <div>
           <p class="covid-status-title">หายป่วยกลับบ้าน</p>
           <p class="covid-status-stats" style="color: #005838">
-            +<span id="sum_total_death"></span>0
+            +<span id="happy">0</span>
           </p>
         </div>
         <div>
-          <p class="covid-status-title">หายป่วยสะสม</p>
-          <p class="covid-status-stats"><span id="total_case"></span>0</p>
+          <p class="covid-status-title">เสียชีวิตสะสม</p>
+          <p class="covid-status-stats" style="color: #ff2928">
+            <span id="sum_total_death">0</span>
+          </p>
         </div>
       </div>
       <div class="vl" id="covid-status">
         <div>
           <p class="covid-status-title">กำลังรักษา</p>
           <p class="covid-status-stats" style="color: #ffd300">
-            <span id="healing_case"></span>0
+            <span id="healing_case">0</span>
           </p>
         </div>
         <div>
           <p class="covid-status-title">ผู้ป่วยสะสม</p>
-          <p class="covid-status-stats"><span id="total_case"></span>0</p>
+          <p class="covid-status-stats"><span id="sum_total_case">0</span></p>
         </div>
       </div>
     </div>
@@ -125,14 +126,75 @@
             if (list_south_no.includes(province.no)) {
               var li = document.createElement("li");
               var today_sum = document.getElementById("sum_today");
+              sum_today += province.count;
               today_sum.innerHTML = sum_today;
               li.innerHTML = `<a href="#">${province.name_th}</a>`;
               ul.appendChild(li);
-              sum_today += province.count;
-              console.log(province.count);
+              // console.log(province.count);
             }
           });
         })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+
+    <script>
+      fetch("https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          list_south_name = [
+            "สงขลา",
+            "นครศรีธรรมราช",
+            "ยะลา",
+            "ปัตตานี",
+            "นราธิวาส",
+            "สุราษฎร์ธานี",
+            "ตรัง",
+            "สตูล",
+            "ภูเก็ต",
+            "ชุมพร",
+            "กระบี่",
+            "พังงา",
+            "พัทลุง",
+            "ระนอง",
+          ];
+          var array = [];
+          for (let i = 0; i < data.length - 1; i++) {
+            var li = document.createElement("li");
+            var province = data[i].province;
+            li.innerHTML += province;
+            array.push(province);
+          }
+
+          let sum_total_case = 0;
+          let sum_today_death = 0;
+          let sum_total_death = 0;
+          data.forEach((south_name) => {
+            // console.log(array.includes(south_name));
+            if (list_south_name.includes(south_name.province)) {
+              //calculate sum_total_case ผู้ป่วยสะสม
+              var today_total_case = document.getElementById("sum_total_case");
+              sum_total_case += south_name.total_case;
+              today_total_case.innerHTML = sum_total_case;
+              console.log(sum_total_case);
+
+              //calculate sum_today_death เสียชีวิตเพิ่มวันนี้
+              var today_death = document.getElementById("sum_today_death");
+              sum_today_death += south_name.new_death;
+              today_death.innerHTML = sum_today_death;
+
+              //calculate sum_total_death เสียชีวิตสะสม
+              var today_total_death =
+                document.getElementById("sum_total_death");
+              sum_total_death += south_name.total_death;
+              today_total_death.innerHTML = sum_total_death;
+            }
+          });
+        })
+
         .catch((err) => {
           console.log(err);
         });
