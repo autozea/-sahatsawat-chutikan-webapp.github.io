@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Covid Stats 2021</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/region.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>COVID 19 STATS IN THAILAND</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="index.html">หน้าหลัก</a>
+      <div class="dropbtn">
+        <div class="dropdown">
+          <a class="dropbtn">ภูมิภาค</a>
+          <div class="dropdown-content">
+            <a href="./region-north.html">ภาคเหนือ</a>
+            <a href="./region-easten.html">ภาคตะวันออก</a>
+            <a href="./region-northeast.html">ตะวันออกเฉียงเหนือ</a>
+            <a href="./region-central.html">ภาคกลาง</a>
+            <a href="./region-westen.html">ภาคตะวันตก</a>
+            <a href="./region-south.html">ภาคใต้</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>สถานการณ์ในภาค<span> ใต้</span></h2>
+      <div class="date_update">
+        <p>อัพเดตข้อมูลล่าสุด <span id="date_update">day</span></p>
+      </div>
+    </div>
+    <div class="rectangle" id="covid-status-main">
+      <div id="covid-status">
+        <div id="stats-top-left">
+          <p class="covid-status-title">ติดเชื้อเพิ่มวันนี้</p>
+          <p class="covid-status-stats-focus" style="color: white">
+            +<span id="sum_case_day">0</span>
+          </p>
+        </div>
+        <div class="covid-status-main">
+          <div id="stats-bottom-left">
+            <p id="covid-status-title">ในประเทศ</p>
+            <p id="covid-status-stats" style="color: #ff2928; margin: 0">
+              <span class="span-style" id="sum_new_case_excludeabroad">0</span>
+            </p>
+          </div>
+          <div id="stats-bottom-left2">
+            <p id="covid-status-title">ต่างประเทศ</p>
+            <p id="covid-status-stats" style="color: #ff2928; margin: 0">
+              <span class="span-style" id="abroad_case">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="vl" id="covid-status">
+        <div id="middle">
+          <p class="covid-status-title">เสียชีวิตเพิ่มวันนี้</p>
+          <p class="covid-status-stats-death" style="color: white">
+            <span id="sum_today_death">0</span>
+          </p>
+        </div>
+      </div>
+      <div class="vl" id="covid-status-box">
+        <div id="stats-top-right">
+          <p class="covid-status-title">เสียชีวิตสะสม</p>
+          <p class="covid-status-stats" style="color: #000000">
+            <span id="sum_total_death">0</span>
+          </p>
+        </div>
+        <div id="stats-bottom-right">
+          <p class="covid-status-title" style="color: white">ผู้ป่วยสะสม</p>
+          <p class="covid-status-stats" style="color: white">
+            <span id="sum_total_case">0</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-container" id="back">
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="ค้นหาจังหวัด.."
+        title="search"
+        style="border-radius: 10px"
+      />
+      <i class="fa fa-search fa-lg"></i>
+    </div>
+    <div class="rectangle" style="border-color: #007662">
+      <div>
+        <table id="table">
+          <tr>
+            <th>จังหวัด</th>
+            <th>ติดเชื้อเพิ่มวันนี้</th>
+            <th>เสียชีวิตเพิ่มวันนี้</th>
+            <th>เสียชีวิตสะสม</th>
+            <th>ผู้ป่วยสะสม</th>
+          </tr>
+          <tr style="text-align: left">
+            <td id="myUL"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <div id="headProvince"></div>
+        <div id="test"></div>
+      </div>
+    </div>
+
+    <script src="./scripts/search-cont.js"></script>
+    <script src="./scripts/calculate_south.js"></script>
+  </body>
+</html>

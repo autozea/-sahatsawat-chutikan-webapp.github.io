@@ -1,0 +1,1353 @@
+/* Style the body */
+
+body {
+  font-family: kanit;
+  margin: 0;
+}
+
+/* Header/logo Title */
+
+.header {
+  padding: 10px;
+  text-align: left;
+  background: #007662;
+  color: white;
+  font-size: 20px;
+  font-family: kanit;
+}
+
+div h2 {
+  width: auto;
+  text-align: left;
+  margin-left: 15%;
+}
+.date_update {
+  width: auto;
+  text-align: right;
+  margin-right: 15%;
+}
+
+div h2 span {
+  font-size: 150%;
+}
+td:nth-child(1) {
+  background-color: mintcream;
+}
+td:nth-child(2) {
+  background-color: rgb(227, 252, 239);
+  
+}
+
+td:nth-child(3) {
+  background-color: rgb(211, 202, 200);
+}
+td:nth-child(4) {
+  background-color: rgb(165, 160, 160);
+  color: white;
+}
+td:nth-child(5) {
+  background-color: #dbf3fd;
+}
+th {
+  background-color: lightgrey;
+  padding-top: 10px;
+  font-size: 1.3rem;
+}
+th:nth-child(1) {
+  border-radius: 40px 0 0 0;
+}
+th:nth-child(5) {
+  border-radius: 0 40px 0 0;
+}
+
+/* Style the top navigation bar */
+
+.navbar {
+  display: flex;
+  background-color: #84cebe;
+}
+
+/* Style the navigation bar links */
+
+.navbar a {
+  color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #efefef;
+  border: white;
+  border-style: solid;
+  border-width: medium;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  background-color: #efefef;
+  border: white;
+  border-style: solid;
+  border-width: medium;
+}
+
+/* Change color on hover */
+
+.navbar a:hover {
+  background-color: #007662;
+  color: white;
+}
+
+/* dropdown */
+
+.dropbtn {
+  color: white;
+  padding: 17px 0 0 0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #84cebe;
+}
+
+.dropdown:hover .dropdown-content {
+  margin-top: 17px;
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #007662;
+  color: white;
+}
+
+/* Column container */
+
+.rectangle {
+  text-align: center;
+  height: 25%;
+  width: 70%;
+  background-color: white;
+  border: 6px #707070 solid;
+  border-radius: 50px;
+  margin: 30px auto;
+  padding: 5px 0 10px 10px;
+}
+
+table {
+  width: 99%;
+  height: auto;
+}
+
+tr {
+  padding: 20px;
+}
+
+td {
+  padding-left: 25px;
+  font-size: 22px;
+}
+
+#covid-status {
+  float: left;
+  width: 100%;
+}
+
+#covid-status-box {
+  width: 100%;
+}
+
+#stats-top-right {
+  background-color: whitesmoke;
+  height: 49%;
+  border-radius: 0 40px 0 0;
+  padding: 1px;
+}
+
+#stats-bottom-right {
+  background-color: gray;
+  height: 50%;
+  border-radius: 0 0 40px 0;
+  padding: 1px;
+}
+
+#covid-status-main {
+  display: flex;
+  padding: 0;
+}
+
+.covid-status-main {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+#covid-status.vl{
+  background-color: black;
+  color: white;
+}
+#stats-top-left {
+  background-color: #ff2928;
+  color: white;
+  border-radius: 40px 0 0 0;
+  padding: 1px;
+}
+#stats-bottom-left {
+  background-color: whitesmoke;
+  
+  width: 100%;
+  border-radius: 0 0 0 40px;
+}
+#stats-bottom-left2 {
+  
+  width: 100%;
+}
+
+.covid-status-title {
+  font-size: 150%;
+  text-align: left;
+  padding: 5% 0 0 5%;
+  margin: 2px;
+}
+#covid-status-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.covid-status-stats {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 10% 0 0;
+  margin: 0;
+}
+#covid-status-stats {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+p #covid-status-stats {
+  justify-content: center;
+  font-weight: bold;
+}
+
+.covid-status-stats-focus {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 5% 10% 0 0;
+  margin: 0;
+}
+
+.covid-status-stats-death {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 10% 0 0 0;
+  margin: 0;
+}
+
+/* vertical line */
+
+.vl {
+  border-left: 1px solid rgb(207, 203, 203);
+}
+
+ul {
+  padding-left: 5%;
+}
+
+/* search */
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px;
+  /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 75%;
+  font-size: 16px;
+  padding: 12px 20px 12px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  font-family: kanit;
+}
+
+.fa {
+  padding: 10px;
+  color: #707070;
+}
+
+.search-container {
+  padding-left: 15%;
+  display: flex;
+  align-items: baseline;
+}
+
+select {
+  font-size: 1rem;
+  padding: 12px 20px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px;
+}
+
+#myUL li a {
+  margin-top: -1px;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+/* province details */
+
+#province-detail {
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 30px 0 10px 10px;
+  color: white;
+  height: 200px;
+  width: 400px;
+}
+
+/* Create two unequal columns that sits next to each other */
+
+/* Sidebar/left column */
+
+/* Main column */
+
+.main {
+  text-align: left;
+  background-color: #efefef;
+  margin: 1% 15%;
+  padding: 0.25% 1%;
+}
+
+/* Footer */
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 1600px) {
+  .main {
+    margin: 0;
+    text-align: center;
+    flex-flow: initial;
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  #stats-top-left {
+    border-radius: 35px 0 0 0;
+  }
+  #stats-bottom-left {
+    border-radius: 0 0 0 35px;
+    padding: 1px;
+  }
+  #stats-top-right {
+    border-radius: 0 35px 0 0;
+  }
+  #stats-bottom-right {
+    border-radius: 0 0 35px 0;
+    padding: 1px;
+    height: 49.5%;
+  }
+  div h2 {
+    width: auto;
+    text-align: left;
+    margin-left: 15%;
+  }
+  div h2 span {
+    font-size: 150%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 70%;
+    background-color: white;
+    border: 4px #707070 solid;
+    border-radius: 40px;
+    margin: 30px auto;
+    padding: 5px 0 10px 10px;
+  }
+  th {
+    padding-top: 10px;
+    font-size: 1.3rem;
+  }
+  th:nth-child(1) {
+    border-radius: 35px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 35px 0 0;
+  }
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 75%;
+    font-size: 16px;
+    padding: 6px 20px 6px 20px;
+    margin: 0;
+    border: 1px solid #ddd;
+    font-family: kanit;
+  }
+  select {
+    font-size: 0.9rem;
+    padding: 6px 20px;
+  }
+
+  #myUL li a {
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+  }
+  #covid-status-box {
+    width: 100%;
+  }
+
+  .box-top {
+    border-radius: 0 40px 0 0;
+  }
+  .box-bottom {
+    border-radius: 0 0 40px 0;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 130%;
+    text-align: left;
+    padding: 0 0 0 10%;
+    margin: 2px;
+  }
+  #covid-status-title {
+    text-align: center;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 3rem;
+    margin: 0;
+  }
+  #covid-status-stats {
+    font-size: 3rem;
+  }
+  .covid-status-stats-focus {
+    font-size: 4.5rem;
+  }
+  .covid-status-stats-death {
+    font-size: 4.5rem;
+  }
+  /* vertical line */
+  .vl {
+    border-left: 1px solid rgb(207, 203, 203);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #stats-top-left {
+    border-radius: 35px 0 0 0;
+  }
+  #stats-bottom-left {
+    border-radius: 0 0 0 35px;
+    padding: 1px;
+  }
+  #stats-top-right {
+    border-radius: 0 35px 0 0;
+  }
+  #stats-bottom-right {
+    border-radius: 0 0 35px 0;
+    padding: 1px;
+  }
+  div h2 {
+    width: auto;
+    text-align: left;
+    margin-left: 15%;
+  }
+  div h2 span {
+    font-size: 150%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 70%;
+    background-color: white;
+    border: 4px #707070 solid;
+    border-radius: 40px;
+    margin: 30px auto;
+    padding: 5px 0 10px 10px;
+  }
+  th {
+    padding-top: 10px;
+    font-size: 1.2rem;
+  }
+  th:nth-child(1) {
+    border-radius: 30px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 30px 0 0;
+  }
+  select {
+    font-size: 1rem;
+    padding: 5px 5px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 75%;
+    font-size: 1rem;
+    padding: 6px 20px 6px 20px;
+    margin: 0;
+  }
+  #myUL li a {
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 130%;
+    text-align: left;
+    padding: 5% 0 0 5%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 8% 0 0;
+    margin: 0;
+  }
+  #covid-status-title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  #covid-status-stats {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  .covid-status-stats-focus {
+    font-size: 4rem;
+  }
+  .covid-status-stats-death {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  div h2 {
+    width: auto;
+    text-align: left;
+    margin-left: 15%;
+  }
+  div h2 span {
+    font-size: 150%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 70%;
+    background-color: white;
+    border: 4px #707070 solid;
+    border-radius: 40px;
+    margin: 30px auto;
+    padding: 5px 0 10px 10px;
+  }
+  th {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+  th:nth-child(1) {
+    border-radius: 35px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 35px 0 0;
+  }
+  select {
+    font-size: 0.9rem;
+    padding: 6px 20px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 75%;
+    font-size: 0.9rem;
+    padding: 6px 20px 6px 20px;
+    margin: 0;
+  }
+  #myUL li a {
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 120%;
+    text-align: left;
+    padding: 0 0 0 10%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 8% 0 0;
+    margin: 0;
+  }
+  #covid-status-title {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  #covid-status-stats {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .covid-status-stats-focus {
+    font-size: 3.5rem;
+  }
+  .covid-status-stats-death {
+    font-size: 3.5rem;
+    padding: 20% 0 0 0;
+  }
+}
+
+@media screen and (max-width: 850) {
+  div h2 {
+    width: auto;
+    text-align: left;
+    margin-left: 15%;
+  }
+  div h2 span {
+    font-size: 150%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 70%;
+    background-color: white;
+    border: 4px #707070 solid;
+    border-radius: 40px;
+    margin: 30px auto;
+    padding: 5px 0 10px 10px;
+  }
+  th {
+    padding-top: 5px;
+    font-size: 0.9rem;
+  }
+  th:nth-child(1) {
+    border-radius: 35px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 35px 0 0;
+  }
+  select {
+    font-size: 0.9rem;
+    padding: 6px 20px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 75%;
+    font-size: 0.9rem;
+    padding: 6px 20px 6px 20px;
+  }
+  #myUL li a {
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 120%;
+    text-align: left;
+    padding: 0 0 0 10%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 8% 0 0;
+    margin: 0;
+  }
+  #covid-status-title {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  #covid-status-stats {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .covid-status-stats-focus {
+    font-size: 3.5rem;
+  }
+  .covid-status-stats-death {
+    font-size: 3.5rem;
+    padding: 20% 0 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #stats-top-left {
+    border-radius: 35px 0 0 0;
+  }
+  #stats-bottom-left {
+    border-radius: 0 0 0 35px;
+    padding: 1px;
+  }
+  #stats-top-right {
+    border-radius: 0 35px 0 0;
+  }
+  #stats-bottom-right {
+    border-radius: 0 0 35px 0;
+    padding: 1px;
+    height: 49%;
+  }
+  div h2 {
+    width: auto;
+    text-align: left;
+    margin-left: 10%;
+  }
+  div h2 span {
+    font-size: 130%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 80%;
+    background-color: white;
+    border: 3px #707070 solid;
+    border-radius: 40px;
+    margin: 20px auto;
+    padding: 5px 0 10px 10px;
+  }
+  th {
+    padding-top: 5px;
+    font-size: 0.9rem;
+  }
+  th:nth-child(1) {
+    border-radius: 35px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 35px 0 0;
+  }
+  .search-container {
+    padding-left: 10%;
+    display: flex;
+    width: 80%;
+    align-items: baseline;
+  }
+  select {
+    font-size: 0.9rem;
+    padding: 6px 20px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 6px 20px 6px 20px;
+  }
+  #myUL li a {
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 100%;
+    text-align: left;
+    padding: 0 0 0 10%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 8% 0 0;
+    margin: 0;
+  }
+  .covid-status-stats-focus {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  div h2 {
+    width: auto;
+    text-align: left;
+    margin-left: 10%;
+  }
+  div h2 span {
+    font-size: 130%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 80%;
+    background-color: white;
+    border: 3px #707070 solid;
+    border-radius: 40px;
+    margin: 15px auto;
+    padding: 5px 0 10px 10px;
+  }
+  th {
+    padding-top: 5px;
+    font-size: 0.9rem;
+  }
+  th:nth-child(1) {
+    border-radius: 40px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 40px 0 0;
+  }
+
+  .search-container {
+    padding-left: 10%;
+    display: flex;
+    width: 80%;
+    align-items: baseline;
+  }
+  select {
+    font-size: 0.8rem;
+    padding: 5px 5px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 6px 20px 6px 20px;
+    margin: 0;
+    border: 1px solid #ddd;
+    font-family: kanit;
+  }
+  #myUL li a {
+    margin-top: -1px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 100%;
+    text-align: left;
+    padding: 0 0 0 10%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 8% 0 0;
+    margin: 0;
+  }
+  #covid-status-title {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  #covid-status-stats {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .covid-status-stats-focus {
+    font-size: 3rem;
+  }
+  .covid-status-stats-death {
+    font-size: 3.5rem;
+    padding: 15% 0 0 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  div h2 {
+    width: auto;
+    text-align: left;
+    margin: 0 0 0 8%;
+  }
+  div h2 span {
+    font-size: 130%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 85%;
+    background-color: white;
+    border: 3px #707070 solid;
+    border-radius: 30px;
+    margin: 12px auto;
+    padding: 5px 0 5px 5px;
+  }
+  th {
+    padding-top: 5px;
+    font-size: 0.8rem;
+  }
+  th:nth-child(1) {
+    border-radius: 30px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 30px 0 0;
+  }
+  .search-container {
+    padding-left: 8%;
+    display: flex;
+    width: 80%;
+    align-items: baseline;
+  }
+  select {
+    font-size: 0.8rem;
+    padding: 5px 5px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 20px 6px 20px;
+    margin: 0;
+    border: 1px solid #ddd;
+    font-family: kanit;
+  }
+  #myUL li a {
+    margin-top: -1px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 100%;
+    text-align: left;
+    padding: 3% 0 0 5%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 5% 3% 0;
+    margin: 0;
+  }
+  #covid-status-title {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  #covid-status-stats {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .covid-status-stats-focus {
+    font-size: 2.8rem;
+  }
+  #stats-top-left {
+    border-radius: 30px 0 0 0;
+  }
+  #stats-bottom-left {
+    border-radius: 0 0 0 30px;
+  }
+  #stats-top-right {
+    border-radius: 0 30px 0 0;
+  }
+
+  #stats-bottom-right {
+    border-radius: 0 0 30px 0;
+  }
+  .covid-status-stats-death {
+    font-size: 2.8rem;
+    padding: 15% 0 0 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  div h2 {
+    width: auto;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+  }
+  div h2 span {
+    font-size: 130%;
+  }
+  .rectangle {
+    text-align: center;
+    height: 25%;
+    width: 95%;
+    background-color: white;
+    border: 3px #707070 solid;
+    border-radius: 20px;
+    margin: 12px auto;
+    padding: 2px 0 5px 5px;
+  }
+  th {
+    padding-top: 5px;
+    font-size: 0.8rem;
+  }
+  th:nth-child(1) {
+    border-radius: 20px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 20px 0 0;
+  }
+  .search-container {
+    padding-left: 3%;
+    display: flex;
+    width: 90%;
+    align-items: baseline;
+  }
+  select {
+    font-size: 0.8rem;
+    padding: 5px 5px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 20px 6px 20px;
+    margin: 0;
+    border: 1px solid #ddd;
+    font-family: kanit;
+  }
+  #myUL li a {
+    margin-top: -1px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 90%;
+    text-align: left;
+    padding: 3% 0 0 5%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 5% 3% 0;
+    margin: 0;
+  }
+  #covid-status-title {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  #covid-status-stats {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .covid-status-stats-focus {
+    font-size: 2.8rem;
+  }
+  #stats-top-left {
+    border-radius: 15px 0 0 0;
+  }
+  #stats-bottom-left {
+    border-radius: 0 0 0 15px;
+  }
+  #stats-top-right {
+    border-radius: 0 15px 0 0;
+  }
+
+  #stats-bottom-right {
+    border-radius: 0 0 15px 0;
+    height: 48.5%;
+  }
+  .covid-status-stats-death {
+    font-size: 2.5rem;
+    padding: 15% 0 0 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  div h2 {
+    width: auto;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+  }
+  div h2 span {
+    font-size: 130%;
+  }
+  .rectangle {
+    width: 95%;
+    border: 2px #707070 solid;
+    border-radius: 10px;
+    margin: 12px auto;
+    padding: 3px 0 5px 0;
+  }
+  th {
+    padding-top: 5px;
+    font-size: 0.8rem;
+  }
+  th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+  }
+  th:nth-child(5) {
+    border-radius: 0 10px 0 0;
+  }
+  .search-container {
+    padding-left: 3%;
+    width: 90%;
+  }
+  select {
+    font-size: 0.8rem;
+    padding: 5px 5px;
+  }
+
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 6px 20px 6px 20px;
+    margin: 0;
+    border: 1px solid #ddd;
+    font-family: kanit;
+  }
+  #myUL li a {
+    padding: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    display: block;
+  }
+  #covid-status {
+    float: left;
+    width: 100%;
+  }
+  #covid-status-main {
+    display: flex;
+    padding: 0;
+  }
+  .covid-status-main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .covid-status-title {
+    font-size: 80%;
+    text-align: left;
+    padding: 3% 0 0 5%;
+    margin: 2px;
+  }
+  .covid-status-stats {
+    font-size: 1.3rem;
+    padding: 0 5% 3% 0;
+    margin: 0;
+  }
+  .covid-status-stats-focus {
+    font-size: 2rem;
+  }
+  #covid-status-title {
+    text-align: center;
+    font-size: 0.6rem;
+    margin: 0;
+  }
+
+  #covid-status-stats {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .covid-status-stats-focus {
+    font-size: 2.3rem;
+  }
+  #stats-top-left {
+    border-radius: 10px 0 0 0;
+  }
+  #stats-bottom-left {
+    border-radius: 0 0 0 10px;
+  }
+  #stats-top-right {
+    border-radius: 0 10px 0 0;
+  }
+
+  #stats-bottom-right {
+    border-radius: 0 0 10px 0;
+  }
+  .covid-status-stats-death {
+    font-size: 2rem;
+    padding: 20% 0 0 0;
+  }
+}
