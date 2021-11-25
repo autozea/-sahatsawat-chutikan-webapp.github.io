@@ -8,16 +8,11 @@ fetch(
     var ul = document.getElementById("myUL");
     ul.style.listStyleType = "none";
     list_westen_no = ["3", "4", "32", "35", "42"];
-    let sum_today = 0;
     data.data.provinces.forEach((province) => {
       if (list_westen_no.includes(province.no)) {
         var li = document.createElement("li");
-        var today_sum = document.getElementById("sum_today");
-        sum_today += province.count;
-        today_sum.innerHTML = sum_today.toLocaleString("en");
         li.innerHTML = `<a href="#">${province.name_th}</a>`;
         ul.appendChild(li);
-        // console.log(province.count);
       }
     });
   })
@@ -77,17 +72,20 @@ fetch("https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces")
         today_total_death.innerHTML = sum_total_death.toLocaleString("en");
 
         //calculate ติดเชื้อวันนี้
+        var sum_case = document.getElementById("sum_case_day");
         check_today_case += westen_name.new_case;
-        // console.log(check_today_case);
+        sum_case.innerHTML = check_today_case;
+        console.log(check_today_case);
 
         //calculate new_case_excludeabroad ในประเทศ
         var today_new_case_excludeabroad = document.getElementById(
           "sum_new_case_excludeabroad"
         );
         new_case_excludeabroad += westen_name.new_case_excludeabroad;
-        today_new_case_excludeabroad.innerHTML =
-          new_case_excludeabroad.toLocaleString("en");
+        today_new_case_excludeabroad.innerHTML = new_case_excludeabroad;
+        // console.log(new_case_excludeabroad);
 
+        // console.log(today_new_case_excludeabroad);
         //abroad
         var today_abroad_case = document.getElementById("abroad_case");
         sum_abroad_case = check_today_case - new_case_excludeabroad;

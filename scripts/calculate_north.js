@@ -9,13 +9,9 @@ fetch(
     ul.style.listStyleType = "none";
 
     list_north_no = ["12", "2", "13", "34", "31", "8", "10", "48", "25"];
-    let sum_today = 0;
     data.data.provinces.forEach((province) => {
       if (list_north_no.includes(province.no)) {
         var li = document.createElement("li");
-        var today_sum = document.getElementById("sum_today");
-        sum_today += province.count;
-        today_sum.innerHTML = sum_today.toLocaleString("en");
         li.innerHTML = `<a href="#">${province.name_th}</a>`;
         ul.appendChild(li);
         // console.log(province.count);
@@ -81,7 +77,9 @@ fetch("https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces")
         today_total_death.innerHTML = sum_total_death.toLocaleString("en");
 
         //calculate ติดเชื้อวันนี้
+        var sum_case = document.getElementById("sum_case_day");
         check_today_case += north_name.new_case;
+        sum_case.innerHTML = check_today_case;
         console.log(check_today_case);
 
         //calculate new_case_excludeabroad ในประเทศ
