@@ -36,49 +36,58 @@
     </div>
     <div>
       <h2>สถานการณ์ในภาค<span> กลาง</span></h2>
+      <div class="date_update">
+        <p>อัพเดตข้อมูลล่าสุด <span id="date_update">day</span></p>
+      </div>
     </div>
     <div class="rectangle" id="covid-status-main">
       <div id="covid-status">
-        <div>
+        <div id="stats-top-left">
           <p class="covid-status-title">ติดเชื้อเพิ่มวันนี้</p>
-          <p class="covid-status-stats" style="color: #ff2928">
+          <p class="covid-status-stats-focus" style="color: white">
             +<span id="sum_today">0</span>
           </p>
         </div>
-        <div>
-          <p class="covid-status-title">เสียชีวิตเพิ่มวันนี้</p>
-          <p class="covid-status-stats"><span id="sum_today_death">0</span></p>
+        <div class="covid-status-main">
+          <div id="stats-bottom-left">
+            <p id="covid-status-title">ในประเทศ</p>
+            <p id="covid-status-stats" style="color: #ff2928; margin: 0">
+              <span class="span-style" id="sum_new_case_excludeabroad">0</span>
+            </p>
+          </div>
+          <div id="stats-bottom-left2">
+            <p id="covid-status-title">ต่างประเทศ</p>
+            <p id="covid-status-stats" style="color: #ff2928; margin: 0">
+              <span class="span-style" id="abroad_case">0</span>
+            </p>
+          </div>
         </div>
       </div>
       <div class="vl" id="covid-status">
-        <div>
-          <p class="covid-status-title">หายป่วยกลับบ้าน</p>
-          <p class="covid-status-stats" style="color: #005838">
-            +<span id="happy">0</span>
+        <div id= "middle">
+          <p class="covid-status-title">เสียชีวิตเพิ่มวันนี้</p>
+          <p class="covid-status-stats-death" style="color: white">
+            <span id="sum_today_death">0</span>
           </p>
         </div>
-        <div>
+      </div>
+      <div class="vl" id="covid-status-box">
+        <div id="stats-top-right">
           <p class="covid-status-title">เสียชีวิตสะสม</p>
-          <p class="covid-status-stats" style="color: #ff2928">
+          <p class="covid-status-stats" style="color: #000000">
             <span id="sum_total_death">0</span>
           </p>
         </div>
-      </div>
-      <div class="vl" id="covid-status">
-        <div>
-          <p class="covid-status-title">กำลังรักษา</p>
-          <p class="covid-status-stats" style="color: #ffd300">
-            <span id="healing_case">0</span>
+        <div id="stats-bottom-right">
+          <p class="covid-status-title"style="color: white">ผู้ป่วยสะสม</p>
+          <p class="covid-status-stats" style="color: white">
+            <span id="sum_total_case">0</span>
           </p>
-        </div>
-        <div>
-          <p class="covid-status-title">ผู้ป่วยสะสม</p>
-          <p class="covid-status-stats"><span id="sum_total_case">0</span></p>
         </div>
       </div>
     </div>
 
-    <div class="search-container">
+    <div class="search-container" id="back">
       <input
         type="text"
         id="myInput"
@@ -90,128 +99,31 @@
       <i class="fa fa-search fa-lg"></i>
     </div>
 
-    <div class="rectangle" style="text-align: left; border-color: #007662">
-      <ul id="myUL"></ul>
+    <div class="rectangle" style="border-color: #007662">
+      <div>
+        <table id="table">
+          <tr>
+            <th>จังหวัด</th>
+            <th>ติดเชื้อเพิ่มวันนี้</th>
+            <th>เสียชีวิตเพิ่มวันนี้</th>
+            <th>เสียชีวิตสะสม</th>
+            <th>ผู้ป่วยสะสม</th>
+          </tr>
+          <tr style="text-align: left">
+            <td id="myUL"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <div id="headProvince"></div>
+        <div id="test"></div>
+        
+      </div>
     </div>
 
     <script src="./scripts/search-cont.js"></script>
-    <script>
-      fetch(
-        "https://api-lab-covid.mindbase.co.th/v2/stats/provinces/daily?key=2f082573-f921-4441-9838-202108a3f4b5116e9c"
-      )
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          var ul = document.getElementById("myUL");
-          ul.style.listStyleType = "none";
-          list_central_no = [
-            "69",
-            "22",
-            "65",
-            "67",
-            "66",
-            "20",
-            "75",
-            "70",
-            "63",
-            "46",
-            "16",
-            "9",
-            "36",
-            "71",
-            "77",
-            "73",
-            "74",
-            "30",
-            "39",
-            "56",
-            "72",
-            "29",
-          ];
-          let sum_today = 0;
-          data.data.provinces.forEach((province) => {
-            if (list_central_no.includes(province.no)) {
-              var li = document.createElement("li");
-              var today_sum = document.getElementById("sum_today");
-              sum_today += province.count;
-              today_sum.innerHTML = sum_today;
-              li.innerHTML = `<a href="#">${province.name_th}</a>`;
-              ul.appendChild(li);
-            }
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    </script>
-
-    <script>
-      fetch("https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces")
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          list_central_name = [
-            "กรุงเทพมหานคร",
-            "กำแพงเพชร",
-            "ชัยนาท",
-            "นครนายก",
-            "นครปฐม",
-            "นครสวรรค์",
-            "นนทบุรี",
-            "ปทุมธานี",
-            "พระนครศรีอยุธยา",
-            "พิจิตร",
-            "พิษณุโลก",
-            "เพชรบูรณ์",
-            "ลพบุรี",
-            "สมุทรปราการ",
-            "สมุทรสงคราม",
-            "สมุทรสาคร",
-            "สิงห์บุรี",
-            "สุโขทัย",
-            "สุพรรณบุรี",
-            "สระบุรี",
-            "อ่างทอง",
-            "อุทัยธานี",
-          ];
-          var array = [];
-          for (let i = 0; i < data.length; i++) {
-            var li = document.createElement("li");
-            var province = data[i].province;
-            li.innerHTML += province;
-            array.push(province);
-          }
-
-          let sum_total_case = 0;
-          let sum_today_death = 0;
-          let sum_total_death = 0;
-          data.forEach((central_name) => {
-            if (list_central_name.includes(central_name.province)) {
-              //calculate sum_total_case ผู้ป่วยสะสม
-              var today_total_case = document.getElementById("sum_total_case");
-              sum_total_case += central_name.total_case;
-              today_total_case.innerHTML = sum_total_case;
-              console.log(sum_total_case);
-
-              //calculate sum_today_death เสียชีวิตเพิ่มวันนี้
-              var today_death = document.getElementById("sum_today_death");
-              sum_today_death += central_name.new_death;
-              today_death.innerHTML = sum_today_death;
-
-              //calculate sum_total_death เสียชีวิตสะสม
-              var today_total_death =
-                document.getElementById("sum_total_death");
-              sum_total_death += central_name.total_death;
-              today_total_death.innerHTML = sum_total_death;
-            }
-          });
-        })
-
-        .catch((err) => {
-          console.log(err);
-        });
-    </script>
+    <script src="./scripts/calculate_central.js"></script>
   </body>
 </html>
